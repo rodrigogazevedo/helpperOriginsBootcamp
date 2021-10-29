@@ -7,7 +7,7 @@ function countVogel(word: string): number {
     let countVogel: number = 0;
     
     for (let i = 0; i < word.length; i++) {
-        let letter: any = word.charAt(i);
+        let letter: string = word.charAt(i);
         if (letter.match(/[aeiou]/gi)) countVogel++; 
     }
 

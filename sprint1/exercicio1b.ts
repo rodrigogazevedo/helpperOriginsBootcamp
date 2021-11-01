@@ -1,17 +1,13 @@
-function countVogelInput(): number {
+function countVogelInput(){
     var word: string = (<HTMLInputElement>document.getElementById("input_word")).value;
 
-    if (typeof word !== 'string') {
-        console.log('Parametro informado não é uma string!');
-        return 1;
-    }
-
     let countVogel: number = 0;
+
+    let wordSeparate: string[] = word.split('')
     
-    for (let i = 0; i < word.length; i++) {
-        let letter: any = word.charAt(i);
+    wordSeparate.forEach (function (letter) {
         if (letter.match(/[aeiou]/gi)) countVogel++; 
-    }
+    });
     
-    return countVogel;
+    (<HTMLInputElement>document.getElementById("output")).value = countVogel.toString();
 }

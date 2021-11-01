@@ -1,17 +1,18 @@
-function countVogel(word: string): number {
+function countVogel(word: string){
     if (typeof word !== 'string') {
         console.log('Parametro informado não é uma string!');
-        return 1;
+        return -1;
     }
 
     let countVogel: number = 0;
-    
-    for (let i = 0; i < word.length; i++) {
-        let letter: string = word.charAt(i);
-        if (letter.match(/[aeiou]/gi)) countVogel++; 
-    }
 
-    return countVogel;
+    let wordSeparate: string[] = word.split('')
+    
+    wordSeparate.forEach (function (letter) {
+        if (letter.match(/[aeiou]/gi)) countVogel++; 
+    });
+
+    console.log(countVogel);
 }
 
 countVogel('Piauiense')

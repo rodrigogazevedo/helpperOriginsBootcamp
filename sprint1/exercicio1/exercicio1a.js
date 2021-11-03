@@ -11,5 +11,6 @@ function countVogel(word) {
             countVogel++;
     });
     console.log(countVogel);
+    return 0;
 }
 countVogel('Piauiense');

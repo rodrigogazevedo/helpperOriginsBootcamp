@@ -1,5 +1,5 @@
-function countVogelInput(){
-    var word: string = (<HTMLInputElement>document.getElementById("input_word")).value;
+function countVogelInput() : void{
+    const word: string = (<HTMLInputElement>document.getElementById("input_word")).value;
 
     let countVogel: number = 0;
 

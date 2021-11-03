@@ -1,4 +1,4 @@
-function countVogel(word: string){
+function countVogel(word: string): number{
     if (typeof word !== 'string') {
         console.log('Parametro informado não é uma string!');
         return -1;
@@ -13,6 +13,7 @@ function countVogel(word: string){
     });
 
     console.log(countVogel);
+    return 0;
 }
 
 countVogel('Piauiense')

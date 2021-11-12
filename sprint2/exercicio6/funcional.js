@@ -25,21 +25,21 @@ var Funcional = /** @class */ (function () {
      */
     Funcional.prototype.findBioFunctional = function (id) {
         var foundBio = this._list.filter(function (person) { return person.id === id; });
-        var f = foundBio.map(function (key) {
+        var bio = foundBio.map(function (key) {
             return key.bio;
         });
-        console.log(f.join(''));
+        console.log(bio.join(''));
     };
     /**
      * Método que encontra o nome de uma pessoa a partir de um id informado
      * @param id Recebe o id para encontrar a pessoa na lista
      */
     Funcional.prototype.findNameFunctional = function (id) {
-        var foundBio = this._list.filter(function (person) { return person.id === id; });
-        var f = foundBio.map(function (key) {
+        var foundName = this._list.filter(function (person) { return person.id === id; });
+        var name = foundName.map(function (key) {
             return key.name;
         });
-        console.log(f.join(''));
+        console.log(name.join(''));
     };
     /**
      * Método que encontra e deleta os dados de uma pessoa a partir de um id informado

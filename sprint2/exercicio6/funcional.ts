@@ -23,10 +23,10 @@ export class Funcional {
      */
     findBioFunctional(id: number): void {
         const foundBio = this._list.filter((person) => person.id === id);
-        const f = foundBio.map(function(key) {
+        const bio = foundBio.map(function(key) {
             return key.bio;
         })
-        console.log(f.join(''));
+        console.log(bio.join(''));
     }
 
     /**
@@ -34,11 +34,11 @@ export class Funcional {
      * @param id Recebe o id para encontrar a pessoa na lista
      */
     findNameFunctional(id: number): void {
-        const foundBio = this._list.filter((person) => person.id === id);
-        const f = foundBio.map(function(key) {
+        const foundName = this._list.filter((person) => person.id === id);
+        const name = foundName.map(function(key) {
             return key.name;
         })
-        console.log(f.join(''));
+        console.log(name.join(''));
     }
 
     /**

@@ -4,6 +4,10 @@ class ManipulationData extends Imperative {
     private result : {property: string, value: number}[] = [];
     private _list: number[];
 
+    /**
+     * Construtor criado para receber uma lista númerica e posterior tratamento
+     * @param list Recebe a lista com os dados para análise
+     */
     constructor(list:number[]) {
         super();
         this._list = list;
@@ -13,22 +17,41 @@ class ManipulationData extends Imperative {
         this._list = list;
     }
     
+    /**
+     * Método que herda o método da classe pai para verifica se a lista é do tipo numérica
+     */
     public isNumber(): boolean {
         return this.verifyListIsNumberImperativa(this._list);
     }
 
+    /**
+     * Método que herda o método da classe pai para verificar qual valor é o menor dentro uma lista.
+     * E depois armazena o valor numa nova lista
+     */
     public smallest() {
         this.result.push({property: "menor", value: this.verifySmallestNumberImperativa(this._list)});
     }
 
+    /**
+     * Método que herda o método da classe pai para verificar qual valor é o maior dentro uma lista.
+     * E depois armazena o valor numa nova lista
+     */
     public greatest() {
         this.result.push({property: "maior", value: this.verifyGreatestNumberImperativa(this._list)});
     }
 
+
+    /**
+     * Método que herda o método da classe pai para verificar a média dos valores dentro uma lista.
+     * E depois armazena o valor numa nova lista
+     */
     public average() {
         this.result.push({property: "média", value: this.verifyAverageNumbersImperativa(this._list)});
     }
 
+    /**
+     * Método que imprime a nova lista.
+     */
     public print() {
         console.log(this.result);
     }

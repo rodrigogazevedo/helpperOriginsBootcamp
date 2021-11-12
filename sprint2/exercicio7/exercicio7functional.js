@@ -18,6 +18,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var functional_1 = require("./functional");
 var ManipulationData = /** @class */ (function (_super) {
     __extends(ManipulationData, _super);
+    /**
+    * Construtor criado para receber uma lista númerica e posterior tratamento
+    * @param list Recebe a lista com os dados para análise
+    */
     function ManipulationData(list) {
         var _this = _super.call(this) || this;
         _this.result = [];
@@ -31,18 +35,36 @@ var ManipulationData = /** @class */ (function (_super) {
         enumerable: false,
         configurable: true
     });
+    /**
+     * Método que herda o método da classe pai para verifica se a lista é do tipo numérica
+     */
     ManipulationData.prototype.isNumber = function () {
         return this.verifyListIsNumberFunctional(this._list);
     };
+    /**
+     * Método que herda o método da classe pai para verificar qual valor é o menor dentro uma lista.
+     * E depois armazena o valor numa nova lista
+     */
     ManipulationData.prototype.smallest = function () {
         this.result.push({ property: "menor", value: this.verifySmallestNumberFunctional(this._list) });
     };
+    /**
+     * Método que herda o método da classe pai para verificar qual valor é o maior dentro uma lista.
+     * E depois armazena o valor numa nova lista
+     */
     ManipulationData.prototype.greatest = function () {
         this.result.push({ property: "maior", value: this.verifyGreatestNumberFunctional(this._list) });
     };
+    /**
+     * Método que herda o método da classe pai para verificar a média dos valores dentro uma lista.
+     * E depois armazena o valor numa nova lista
+     */
     ManipulationData.prototype.average = function () {
         this.result.push({ property: "média", value: this.verifyAverageNumbersFunctional(this._list) });
     };
+    /**
+     * Método que imprime a nova lista.
+     */
     ManipulationData.prototype.print = function () {
         console.log(this.result);
     };

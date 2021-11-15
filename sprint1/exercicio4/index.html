@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="data.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="card">
+        <div class="lineInput">
+            <label>ID</label>
+            <input type="text" id="id" readonly>
+        </div>
+        <div class="lineInput">
+            <label>Name</label>
+            <input type="text" id="name">
+        </div>
+        <div class="lineInput">
+            <label>Bio</label>
+            <input type="text" id="bio">
+        </div>
+
+        <button onclick="save()" id="btn1">Salvar</button>
+        <button onclick="cancel()">Cancelar</button>
+    </div>
+    <div class="content">
+        <table border="1">
+            <thead>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Bio</th>
+                <th colspan="2">Actions</th>
+            </thead>
+            <tbody id="tbody">
+                <script>
+                    listTable();
+                </script>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

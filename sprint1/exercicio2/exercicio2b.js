@@ -13,11 +13,11 @@ function findNameImperativa(id) {
     }
 }
 function findNameFunctional(id) {
-    var foundBio = list2.filter(function (person) { return person.id === id; });
-    var f = foundBio.map(function (key) {
+    var foundName = list2.filter(function (person) { return person.id === id; });
+    var name = foundName.map(function (key) {
         return key.name;
     });
-    console.log(f.join(''));
+    console.log(name.join(''));
 }
 console.log("Função para achar o nome usando paradigma funcional: \n");
 findNameFunctional(1);

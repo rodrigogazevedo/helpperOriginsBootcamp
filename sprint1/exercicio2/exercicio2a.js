@@ -14,10 +14,10 @@ function findBioImperativa(id) {
 }
 function findBioFunctional(id) {
     var foundBio = list.filter(function (person) { return person.id === id; });
-    var f = foundBio.map(function (key) {
+    var bio = foundBio.map(function (key) {
         return key.bio;
     });
-    console.log(f.join(''));
+    console.log(bio.join(''));
 }
 console.log("Função para achar bio usando paradigma funcional: \n");
 findBioFunctional(1);

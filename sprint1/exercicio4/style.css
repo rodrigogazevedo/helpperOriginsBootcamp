@@ -1,0 +1,34 @@
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+.lineInput {
+  display: grid;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: 0;
+}
+
+button {
+  border: 0px;
+  padding: 5px;
+  outline: 0;
+  background-color: rgb(131, 131, 131);
+  color: #fff;
+  border-radius: 3px;
+  font-weight: bold;
+  transition: all ease 0.3s;
+}
+
+.content {
+  margin-top: 30px;
+}

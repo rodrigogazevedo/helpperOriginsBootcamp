@@ -1,5 +1,6 @@
 "use strict";
 function greatestSmallestAverageValueFuncional(list) {
+    var result2 = [];
     if (list.some(function (value) { return typeof value !== 'number'; })) {
         console.log('A lista não é numérica');
         return -1;
@@ -10,6 +11,7 @@ function greatestSmallestAverageValueFuncional(list) {
     console.log(result2);
     return 0;
 }
+//Deletar método pois não faz sentido 
 function verifyListIsNumberFuncional(value) {
     if (typeof value !== "number")
         return false;
@@ -28,5 +30,4 @@ function verifyAverageNumbersFuncional(list) {
     return sum / quantity;
 }
 var numbers2 = [2, 3, 5, 6, 10, 15, 8, 20, 31, 50];
-var result2 = [];
 greatestSmallestAverageValueFuncional(numbers2);

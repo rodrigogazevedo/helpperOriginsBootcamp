@@ -11,40 +11,43 @@ function greatestSmallestAverageValueImperativa(list) {
     return 0;
 }
 function verifyListIsNumberImperativa(list) {
-    list.forEach(function (value) {
-        if (typeof value !== 'number')
+    for (var index = 0; index < list.length; index++) {
+        if (typeof list[index] !== 'number')
             return false;
-    });
+    }
     return true;
 }
 function verifySmallestNumberImperativa(list) {
     var smallestNumber = 0;
-    list.forEach(function (value, index) {
+    for (var index = 0; index < list.length; index++) {
         if (index == 0) {
-            smallestNumber = value;
+            smallestNumber = list[index];
         }
-        if (value < smallestNumber) {
-            smallestNumber = value;
+        if (list[index] < smallestNumber) {
+            smallestNumber = list[index];
         }
-    });
+    }
     return smallestNumber;
 }
 function verifyGreatestNumberImperativa(list) {
     var greatestNumber = 0;
-    list.forEach(function (value) {
-        if (value > greatestNumber) {
-            greatestNumber = value;
+    for (var index = 0; index < list.length; index++) {
+        if (index == 0) {
+            greatestNumber = list[index];
         }
-    });
+        if (list[index] > greatestNumber) {
+            greatestNumber = list[index];
+        }
+    }
     return greatestNumber;
 }
 function verifyAverageNumbersImperativa(list) {
     var sum = 0;
     var quantity = 0;
-    list.forEach(function (value) {
-        sum += value;
+    for (var index = 0; index < list.length; index++) {
+        sum += list[index];
         quantity++;
-    });
+    }
     return sum / quantity;
 }
 var numbers = [2, 3, 5, 6, 10, 15, 8, 20, 31, 50];
